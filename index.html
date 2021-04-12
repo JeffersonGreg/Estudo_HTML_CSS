@@ -1,0 +1,44 @@
+<HTML>
+<head>
+<link rel="stylesheet" type="text/css" href="FS.css">
+<script language="javascript">
+const root = document.documentElement;
+function changeValue(id, value) {
+  const suffix = (id != 'color' ? '%' : '');
+  root.style.setProperty(`--${id}`, value + suffix);
+  console.log(value + suffix)
+}
+</script>
+</head>
+<table>
+<tr>
+
+
+<td><div class="vermelho"></div></td>
+<td><div class="azul"></div></td>
+<td><div class="vermelho"></div></td>
+<td><div class="azul"></div></td>
+<td><div class="vermelho"></div></td>
+<td><div class="azul"></div></td>
+<td><div class="vermelho"></div></td>
+<td><div class="azul"></div></td>
+<td><div class="vermelho"></div></td>
+<td><div class="azul"></div></td>
+<td><div class="vermelho"></div></td>
+<td><div class="azul"></div></td>
+
+</tr>
+
+
+
+</table>
+<br>
+<p>Selecione para alterar a COR:
+<input type="color" value="red" onchange="changeValue('color', this.value)">
+</p>
+
+
+
+
+
+</HTML>
