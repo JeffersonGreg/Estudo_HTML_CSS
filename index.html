@@ -1,15 +1,7 @@
 <HTML>
 <head>
 <link rel="stylesheet" type="text/css" href="FS.css">
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script language="javascript">
-const root = document.documentElement;
-function changeValue(id, value) {
-  const suffix = (id != 'color' ? '%' : '');
-  root.style.setProperty(`--${id}`, value + suffix);
-  console.log(value + suffix)
-}
-</script>
+
 </head>
 <table>
 <tr>
@@ -37,9 +29,6 @@ function changeValue(id, value) {
 <p>Selecione para alterar a COR:
 <input type="color" value="red" onchange="changeValue('color', this.value)">
 </p>
-<div class="g-recaptcha" data-sitekey="6LfrbqcaAAAAAEdaQLsPyY2U_Eq2GEh0Enz8xLfv"></div>
-
-
 
 
 </HTML>
