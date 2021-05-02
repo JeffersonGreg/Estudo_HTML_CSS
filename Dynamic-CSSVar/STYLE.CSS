@@ -1,0 +1,27 @@
+
+:root {
+  --colorUser:#ffffff;
+   --colorPass:#ffffff;
+
+}
+
+body{background-color:#555555;
+
+
+}
+div{
+width:350px;
+height:150px;
+background-color:999999;
+border-color:000000;
+border-style: solid;
+border-radius:20px;
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+
+}
+input.USER {background-color:var(--colorUser);}
+input.PASS {background-color:var(--colorPass);}
+
+table{margin-left:auto;margin-right:auto;margin-top:25px;}
