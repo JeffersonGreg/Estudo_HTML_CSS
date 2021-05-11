@@ -1,0 +1,171 @@
+<html>
+<head>
+<script>
+var cont = 0
+var led = ['svg_1','svg_3','svg_4','svg_5','svg_6','svg_7','svg_8'];
+var crono;
+
+function verde(x){
+document.getElementById(x).style.fill="#0F0";
+}
+function cinza(){
+
+for (var i = 0; i < led.length; i++) {
+  document.getElementById(led[i]).style.fill="#111111";
+}
+
+}
+
+function display(x){
+cinza();
+switch (x){
+case 1: 
+	verde("svg_3");
+	verde("svg_6");
+	break;
+case 2: 
+	verde("svg_1");
+	verde("svg_3");
+	verde("svg_5");
+	verde("svg_7");
+	verde("svg_8");
+	break;
+case 3:
+	verde("svg_1");
+	verde("svg_3");
+	verde("svg_5");
+	verde("svg_6");
+	verde("svg_8");
+	break;
+case 4:
+
+	verde("svg_3");
+	verde("svg_5");
+	verde("svg_6");
+	verde("svg_4");
+break;
+case 5: 
+	verde("svg_1");
+	verde("svg_5");
+	verde("svg_6");
+	verde("svg_4");
+	verde("svg_8");
+break;
+case 6:
+	verde("svg_1");
+	verde("svg_5");
+	verde("svg_6");
+	verde("svg_4");
+	verde("svg_8");
+	verde("svg_7"); 
+break;
+case 7: 
+	verde("svg_3");
+	verde("svg_6");
+	verde("svg_1");
+break;
+
+case 8: 
+	verde("svg_1");
+	verde("svg_3");
+	verde("svg_4");
+	verde("svg_5");
+	verde("svg_6");
+	verde("svg_7");
+	verde("svg_8");
+break;
+case 9: 
+
+	verde("svg_1");
+	verde("svg_3");
+	verde("svg_4");
+	verde("svg_5");
+	verde("svg_6");
+	verde("svg_8");
+break;
+
+case 0:
+	verde("svg_1");
+	verde("svg_3");
+	verde("svg_4");
+	verde("svg_6");
+	verde("svg_7");
+	verde("svg_8");
+
+ break;
+}
+}
+
+function contar(){
+if(cont==10){cont=0};
+display(cont);
+cont++
+
+}
+
+
+</script>
+<style>
+body{background-color: black; text-align:center;}
+table{
+margin:0 auto;
+
+}
+td{text-align:center;
+border-style:solid;
+font-family:arial;
+width:50px;
+height:50px;
+background-color:#666666;
+border-color:#333333;
+}
+td:hover{background-color:#999999;}
+td:active{background-color:#009900;}
+</style>
+
+</head>
+<body>
+
+<svg width="170" height="300" xmlns="http://www.w3.org/2000/svg">
+ <g id="Layer_1">
+  <title>Layer 1</title>
+  <path  id="svg_1" d="m29.51713,29.93976l22.19999,-23.99996l66.59995,0l22.20007,23.99996l-22.20007,24.00004l-66.59995,0l-22.19999,-24.00004z" stroke="#000" fill="#111111"/>
+  <path  id="svg_4" transform="rotate(90 27.5172 88.9398)" stroke="#000"  d="m-27.98285,88.93975l22.19999,-21.49996l66.59995,0l22.20007,21.49996l-22.20007,21.50003l-66.59995,0l-22.19999,-21.50003z" fill="#111111"/>
+  <path  id="svg_3" transform="rotate(90 142.517 88.9398)" stroke="#000"  d="m87.01715,88.93975l22.19999,-21.49996l66.59995,0l22.20007,21.49996l-22.20007,21.50004l-66.59995,0l-22.19999,-21.50004z" fill="#111111"/>
+  <path  id="svg_5" d="m29.51713,147.93976l22.19999,-23.99996l66.59995,0l22.20007,23.99996l-22.20007,24.00004l-66.59995,0l-22.19999,-24.00004z" stroke="#000" fill="#111111"/>
+  <path  id="svg_6" transform="rotate(90 142.517 206.94)" stroke="#000" d="m87.01715,206.93975l22.19999,-21.49996l66.59995,0l22.20007,21.49996l-22.20007,21.50003l-66.59995,0l-22.19999,-21.50003z" fill="#111111"/>
+  <path  id="svg_7"transform="rotate(90 27.5172 206.94)" stroke="#000"  d="m-27.98285,206.93975l22.19999,-21.49996l66.59995,0l22.20007,21.49996l-22.20007,21.50003l-66.59995,0l-22.19999,-21.50003z" fill="#111111"/>
+  <path  id="svg_8" d="m29.51713,265.93976l22.19999,-23.99996l66.59995,0l22.20007,23.99996l-22.20007,24.00004l-66.59995,0l-22.19999,-24.00004z" stroke="#000" fill="#111111"/>
+ </g>
+
+</svg>
+<br>
+
+
+<table>
+<tr>
+<td onclick="crono = window.setInterval('contar()',1000)">
+START
+</td>
+<td ONCLICK="window.clearInterval(crono);">
+STOP
+</td>
+</tr>
+<tr>
+<td onclick="cinza(); cont=0">
+RESET
+</td>
+<td onclick="contar()">
++1
+</td>
+</tr>
+
+
+</table>
+
+</body>
+
+
+
+
+</html>
